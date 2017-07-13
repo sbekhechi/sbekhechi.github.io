@@ -66,9 +66,28 @@
     		cursor: pointer;
     		transition: 0.3s;
 			}
+			#jack {
+    		border-radius: 5px;
+    		cursor: pointer;
+    		transition: 0.3s;
+			}
+			#madkour {
+    		border-radius: 5px;
+    		cursor: pointer;
+    		transition: 0.3s;
+			}
+			#emsophie {
+    		border-radius: 5px;
+    		cursor: pointer;
+    		transition: 0.3s;
+			}
 
 			#mason:hover {opacity: 0.7;}
 			#sam:hover {opacity: 0.7;}
+			#jack:hover {opacity: 0.7;}
+			#madkour:hover {opacity: 0.7;}
+			#emsophie:hover {opacity: 0.7;}
+
 
 			/* The Modal (background) */
 			.modal {
@@ -153,6 +172,12 @@
 
 <img id="mason" src="mason.JPG" alt="Mason Stilwell" width="300" height="200">
 <img id="sam" src="sam.JPG" alt="Samuel Hansen" width="300" height="200">
+<img id="jack" src="jack.JPG" alt="Jahm Hamby" width="300" height="200">
+<img id="madkour" src="madkour.JPG" alt="Abdel-Rahman Madkour" width="300" height="200">
+<img id="emsophie" src="emsophie.JPG" alt="Emma Standen and Sophia Eckmeier" width="300" height="200">
+
+
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -168,6 +193,10 @@ var modal = document.getElementById('myModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img1 = document.getElementById('mason');
 var img2 = document.getElementById('sam');
+var img3 = document.getElementById('jack');
+var img4 = document.getElementById('madkour');
+var img5 = document.getElementById('emsophie');
+
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 img1.onclick = function(){
