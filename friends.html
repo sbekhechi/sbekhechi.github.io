@@ -56,13 +56,13 @@
 <div class="container-fluid">
 	<div class="row">
 		<style>
-			#myImg {
+			#mason {
     		border-radius: 5px;
     		cursor: pointer;
     		transition: 0.3s;
 			}
 
-			#myImg:hover {opacity: 0.7;}
+			#mason:hover {opacity: 0.7;}
 
 			/* The Modal (background) */
 			.modal {
@@ -145,7 +145,8 @@
 
 <h2>Image Modal</h2>
 
-<img id="myImg" src="mason.JPG" alt="Mason Stilwell" width="300" height="200">
+<img id="mason" src="mason.JPG" alt="Mason Stilwell" width="300" height="200">
+<img id="sam" src="sam.JPG" alt="Samuel Hansen" width="300" height="200">
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -159,7 +160,7 @@
 var modal = document.getElementById('myModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
+var img = document.getElementById('mason');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 img.onclick = function(){
