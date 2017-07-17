@@ -95,6 +95,18 @@
     		transition: 0.3s;
 			}
 
+            #mitch {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            }
+
+            #noah {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            }            
+
 			#mason:hover {opacity: 0.7;}
 			#sam:hover {opacity: 0.7;}
 			#jack:hover {opacity: 0.7;}
@@ -103,6 +115,8 @@
 			#tomian:hover {opacity: 0.7;}
 			#jacknoah:hover {opacity: 0.7;}
 			#emanna:hover {opacity: 0.7;}
+            #mitch:hover {opacity: 0.7;}
+            #noah:hover {opacity: 0.7;}
 
 
 
@@ -196,6 +210,7 @@
         <img id="madkour" src="madkour.JPG" alt="Abdel-Rahman Madkour" width="300" height="200" hspace="20">
     </div>
 
+    <br>
 
     <div align="center">
         <img id="emsophie" src="emsophie.JPG" alt="Emma and Sophia" width="300" height="200" hspace="20">
@@ -203,6 +218,15 @@
         <img id="jacknoah" src="jacknoah.JPG" alt="Jahm Hamby and Noah Phillips" width="300" height="200" hspace="20">
         <img id="emanna" src="emanna.JPG" alt="Emma and Anna" width="300" height="200" hspace="20">
     </div>
+
+    <br>
+
+    <div align="center">
+        <img id="mitch" src="mitchjazz.JPG" alt="Mitchell Peterson" width="300" height="200" hspace="20">
+        <img id="noah" src="noah.JPG" alt="Noah Phillips" width"300" height="200" hspace="20">
+
+    </div>
+
 </div>
 
 
@@ -226,7 +250,8 @@ var img5 = document.getElementById('emsophie');
 var img6 = document.getElementById('tomian');
 var img7 = document.getElementById('jacknoah');
 var img8 = document.getElementById('emanna');
-
+var img9 = document.getElementById('mitch');
+var img10 = document.getElementById('noah');
 
 
 var modalImg = document.getElementById("img01");
@@ -271,6 +296,19 @@ img8.onclick = function(){
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
 }
+
+img9.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+img10.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
