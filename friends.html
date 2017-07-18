@@ -137,6 +137,25 @@
             transition: 0.3s;
             }    
 
+            #frankie {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            } 
+
+            #justin {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            } 
+
+            #noahfish {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            } 
+
+
 			#mason:hover {opacity: 0.7;}
 			#sam:hover {opacity: 0.7;}
 			#jack:hover {opacity: 0.7;}
@@ -152,6 +171,9 @@
             #noahsmoke:hover {opacity: 0.7;}
             #tindmitch:hover {opacity: 0.7;}
             #selfportrait:hover {opacity: 0.7;}
+            #frankie:hover {opacity: 0.7;}
+            #justin:hover {opacity: 0.7;}
+            #noahfish:hover {opacity: 0.7;}
 
 
 
@@ -266,7 +288,7 @@
 
     <div align="center">
         <img id="emanna" src="emanna.JPG" alt="Emma and Anna" width="300" height="200" hspace="20">
-        <img id="sam" src="sam.JPG" alt="Samuel Hansen" width="300" height="200" hspace="20">
+        <img id="sam" src="sam.JPG" alt="Samuel" width="300" height="200" hspace="20">
         <img id="jackhamby" src="jackhamby.JPG" alt="Jack Hamby" width"300" height="200" hspace="20">
     </div>
 
@@ -276,6 +298,14 @@
         <img id="noahsmoke" src="noahsmoke.JPG" alt="Noah" width="300" height="200" hspace="20">
         <img id="tindmitch" src="tindmitch.JPG" alt="Mitchell" width="300" height="200" hspace="20">
         <img id="selfportrait" src="selfportrait.JPG" alt="Samir Bekhechi" width"300" height="200" hspace="20">
+    </div>
+
+    <br>
+
+    <div align="center">
+        <img id="frankie" src="frankie.JPG" alt="Frank" width="300" height="200" hspace="20">
+        <img id="justin" src="justin.JPG" alt="Justin Justin Justin" width="300" height="200" hspace="20">
+        <img id="noahfish" src="noahfish.JPG" alt="Noah" width"300" height="200" hspace="20">
     </div>
 
     <br>
@@ -310,6 +340,9 @@ var img12 = document.getElementById('jackhamby');
 var img13 = document.getElementById('noahsmoke');
 var img14 = document.getElementById('tindmitch');
 var img15 = document.getElementById('selfportrait');
+var img16 = document.getElementById('frankie');
+var img17 = document.getElementById('justin');
+var img18 = document.getElementById('noahfish');
 
 
 
@@ -398,6 +431,23 @@ img15.onclick = function(){
     captionText.innerHTML = this.alt;
 }
 
+img16.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+img17.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+img18.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
