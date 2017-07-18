@@ -119,6 +119,24 @@
             transition: 0.3s;
             }          
 
+            #noahsmoke {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            }
+
+            #tindmitch {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            }  
+
+            #selfportrait {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            }    
+
 			#mason:hover {opacity: 0.7;}
 			#sam:hover {opacity: 0.7;}
 			#jack:hover {opacity: 0.7;}
@@ -131,6 +149,9 @@
             #noah:hover {opacity: 0.7;}
             #tom:hover {opacity: 0.7;}
             #jackhamby:hover {opacity: 0.7;}
+            #noahsmoke:hover {opacity: 0.7;}
+            #tindmitch:hover {opacity: 0.7;}
+            #selfportrait:hover {opacity: 0.7;}
 
 
 
@@ -251,6 +272,14 @@
 
     <br>
 
+    <div align="center">
+        <img id="noahsmoke" src="noahsmoke.JPG" alt="Noah" width="300" height="200" hspace="20">
+        <img id="tindmitch" src="tindmitch.JPG" alt="Mitchell" width="300" height="200" hspace="20">
+        <img id="selfportrait" src="selfportrait.JPG" alt="Samir Bekhechi" width"300" height="200" hspace="20">
+    </div>
+
+    <br>
+
 </div>
 
 
@@ -278,6 +307,9 @@ var img9 = document.getElementById('mitch');
 var img10 = document.getElementById('noah');
 var img11 = document.getElementById('tom');
 var img12 = document.getElementById('jackhamby');
+var img13 = document.getElementById('noahsmoke');
+var img14 = document.getElementById('tindmitch');
+var img15 = document.getElementById('selfportrait');
 
 
 
@@ -348,6 +380,23 @@ img12.onclick = function(){
     captionText.innerHTML = this.alt;
 }
 
+img13.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+img14.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+img15.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
