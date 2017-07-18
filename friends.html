@@ -105,7 +105,19 @@
             border-radius: 5px;
             cursor: pointer;
             transition: 0.3s;
-            }            
+            }  
+
+            #tom {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            }
+
+            #jackhamby {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            }          
 
 			#mason:hover {opacity: 0.7;}
 			#sam:hover {opacity: 0.7;}
@@ -117,6 +129,8 @@
 			#emanna:hover {opacity: 0.7;}
             #mitch:hover {opacity: 0.7;}
             #noah:hover {opacity: 0.7;}
+            #tom:hover {opacity: 0.7;}
+            #jackhamby:hover {opacity: 0.7;}
 
 
 
@@ -224,7 +238,8 @@
     <div align="center">
         <img id="mitch" src="mitchjazz.JPG" alt="Mitchell Peterson" width="300" height="200" hspace="20">
         <img id="noah" src="noah.JPG" alt="Noah Phillips" width"300" height="200" hspace="20">
-
+        <img id="tom" src="tom.JPG" alt="Tom Knee" width"300" height="200" hspace="20">
+        <img id="jackhamby" src="jackhamby.JPG" alt="Jack Hamby" width"300" height="200" hspace="20">
     </div>
 
 </div>
@@ -252,6 +267,9 @@ var img7 = document.getElementById('jacknoah');
 var img8 = document.getElementById('emanna');
 var img9 = document.getElementById('mitch');
 var img10 = document.getElementById('noah');
+var img11 = document.getElementById('tom');
+var img12 = document.getElementById('jackhamby');
+
 
 
 var modalImg = document.getElementById("img01");
@@ -308,6 +326,19 @@ img10.onclick = function(){
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
 }
+
+img11.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+img12.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
