@@ -75,11 +75,22 @@
         cursor: pointer;
         transition: 0.3s;
       }
-
+      #milk {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      #brush {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
 
       #marsky:hover {opacity: 0.7;}
       #watertower:hover {opacity: 0.7;}
       #condos:hover {opacity: 0.7;}
+      #milk:hover {opacity: 0.7;}
+      #brush:hover {opacity: 0.7;}
 
       /* The Modal (background) */
       .modal {
@@ -161,7 +172,8 @@
 
   </style>
 
-  <h2><center>Night Work</center></h2>
+  <h2><center>Night Photography</center></h2>
+  
   <br>
 
   <div algin="container-fluid">
@@ -172,6 +184,14 @@
     </div>
 
     <br>
+
+    <div align="center">
+        <img id="milk" src="milk.JPG" alt="Northfield, MN" width="300" height="200" hspace="20">
+        <img id="brush" src="brush.JPG" alt="Northfield, MN" width"300" height="200" hspace="20">
+    </div>
+
+    <br>
+
   </div>
 
   <!-- The Modal -->
@@ -189,6 +209,8 @@
 var img1 = document.getElementById('marsky');
 var img2 = document.getElementById('watertower');
 var img3 = document.getElementById('condos');
+var img4 = document.getElementById('milk');
+var img5 = document.getElementById('brush');
 
 
 var modalImg = document.getElementById("img01");
@@ -204,6 +226,16 @@ img2.onclick = function(){
     captionText.innerHTML = this.alt;
 }
 img3.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img4.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img5.onclick = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
