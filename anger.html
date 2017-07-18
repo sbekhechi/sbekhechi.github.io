@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  <head>
+    <title>samirbekhechi.com</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--shrink-to-fit-no">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+
+<body>
+
+<!--Navbar-->
+<nav class="navbar navbar-inverse">
+  <!--Container fluid allows for self change formatting-->
+  <div class="container-fluid">
+    <!--Brand and toggle get grouped for better mobile display-->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://sbekhechi.github.io">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/whoami.html">Who Am I<span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="/photoport.html">Photography Portfolio</a></li>
+        <li class="active"><a href="/projects.html">Projects</a></li>
+        <li class="active"><a href="/contact.html">Contact Me</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Go To<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://edstanden.wix.com/portfolio" onclick='window.open("http://edstanden.wix.com/portfolio"); return false;'>Emma's Website</a></li>
+            <li><a href="http://andersponders.com/" onclick='window.open("http://andersponders.com/"); return false;'>Anders' Website</a></li>
+            <li><a href="http://jackhamby.com/" onclick='window.open("http://jackhamby.com/"); return false;'>Jack's Website</a></li>
+            <li><a href="http://omarshehata.me/" onclick='window.open("http://omarshehata.me");return false;'>Omar's Website</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="https://digmissoula.wixsite.com/digmissoula" onclick='window.open("https://digmissoula.wixsite.com/digmissoula"); return false;'>DIG Missoula Vollyball</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!--<form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>-->
+    </div>
+    <!--navbar collapse-->
+  </div>
+</nav>
+
+  <style>
+      #fear1 {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      #fear2 {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      #fear3 {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      #fear4 {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      #fear5 {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+
+      #fear1:hover {opacity: 0.7;}
+      #fear2:hover {opacity: 0.7;}
+      #fear3:hover {opacity: 0.7;}
+      #fear4:hover {opacity: 0.7;}
+      #fear5:hover {opacity: 0.7;}
+
+
+
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      }
+
+      /* Modal Content (image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      /* Caption of Modal Image */
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+
+      /* Add Animation */
+      .modal-content, #caption {    
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+      }
+
+      @keyframes zoom {
+          from {transform:scale(0)} 
+          to {transform:scale(1)}
+      }
+
+      /* The Close Button */
+      .close {
+          position: absolute;
+          top: 15px;
+          right: 35px;
+          color: #f1f1f1;
+          font-size: 40px;
+          font-weight: bold;
+          transition: 0.3s;
+      }
+
+      .close:hover,
+      .close:focus {
+          color: #bbb;
+          text-decoration: none;
+          cursor: pointer;
+      }
+
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px){
+          .modal-content {
+              width: 100%;
+          }
+      }
+
+  </style>
+
+  <h2><center>Anger</center></h2>
+  
+  <br>
+
+  <div algin="container-fluid">
+    <div align="center">
+        <img id="fear1" src="fear1.JPG" alt="Jack Hamby" width="300" height="200" hspace="20">
+    </div>
+
+    <br>
+
+    <div align="center">
+        <img id="fear2" src="fear2.JPG" alt="Jack Hamby" width="300" height="200" hspace="20">
+    </div>
+
+    <br>
+
+    <div align="center">
+        <img id="fear3" src="fear3.JPG" alt="Jack Hamby" width="300" height="200" hspace="20">
+    </div>
+
+    <br>
+
+    <div align="center">
+        <img id="fear4" src="fear4.JPG" alt="Jack Hamby" width="300" height="200" hspace="20">
+    </div>
+
+    <br>
+
+    <div align="center">
+        <img id="fear5" src="fear5.JPG" alt="Jack Hamby" width="300" height="200" hspace="20">
+    </div>
+
+    <br>
+
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img1 = document.getElementById('fear1');
+var img2 = document.getElementById('fear2');
+var img3 = document.getElementById('fear3');
+var img4 = document.getElementById('fear4');
+var img5 = document.getElementById('fear5');
+
+
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img1.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img2.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img3.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img4.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img5.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
+
+</body>
+</html>
