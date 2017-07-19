@@ -85,12 +85,18 @@
         cursor: pointer;
         transition: 0.3s;
       }
+      #orangesky {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
 
       #marsky:hover {opacity: 0.7;}
       #watertower:hover {opacity: 0.7;}
       #condos:hover {opacity: 0.7;}
       #milk:hover {opacity: 0.7;}
       #brush:hover {opacity: 0.7;}
+      #orangesky:hover {opacity: 0.7;}
 
       /* The Modal (background) */
       .modal {
@@ -188,6 +194,7 @@
     <div align="center">
         <img id="milk" src="milk.JPG" alt="Northfield, MN" width="300" height="200" hspace="20">
         <img id="brush" src="brush.JPG" alt="Northfield, MN" width"300" height="200" hspace="20">
+        <img id="orangesky" src="orangesky.JPG" alt="Northfield, MN" width"300" height="200" hspace="20">
     </div>
 
     <br>
@@ -211,6 +218,7 @@ var img2 = document.getElementById('watertower');
 var img3 = document.getElementById('condos');
 var img4 = document.getElementById('milk');
 var img5 = document.getElementById('brush');
+var img6 = document.getElementById('orangesky');
 
 
 var modalImg = document.getElementById("img01");
@@ -240,7 +248,11 @@ img5.onclick = function(){
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
 }
-
+img6.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
