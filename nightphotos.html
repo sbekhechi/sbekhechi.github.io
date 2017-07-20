@@ -1,264 +1,299 @@
 <!DOCTYPE html>
 
-
 <html lang="en">
-  <head>
-    <title>samirbekhechi.com</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--shrink-to-fit-no">-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>samirbekhechi.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!--shrink-to-fit-no">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+</style>
 
 <body>
 
-<!--Navbar-->
-<nav class="navbar navbar-inverse">
-  <!--Container fluid allows for self change formatting-->
-  <div class="container-fluid">
-    <!--Brand and toggle get grouped for better mobile display-->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="https://sbekhechi.github.io">Home</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/whoami.html">Who Am I<span class="sr-only">(current)</span></a></li>
-        <li class="active"><a href="/photoport.html">Photography Portfolio</a></li>
-        <li class="active"><a href="/projects.html">Projects</a></li>
-        <li class="active"><a href="/contact.html">Contact Me</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Go To<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="http://edstanden.wix.com/portfolio" onclick='window.open("http://edstanden.wix.com/portfolio"); return false;'>Emma's Website</a></li>
-            <li><a href="http://andersponders.com/" onclick='window.open("http://andersponders.com/"); return false;'>Anders' Website</a></li>
-            <li><a href="http://jackhamby.com/" onclick='window.open("http://jackhamby.com/"); return false;'>Jack's Website</a></li>
-            <li><a href="http://omarshehata.me/" onclick='window.open("http://omarshehata.me");return false;'>Omar's Website</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="https://digmissoula.wixsite.com/digmissoula" onclick='window.open("https://digmissoula.wixsite.com/digmissoula"); return false;'>DIG Missoula Vollyball</a></li>
-          </ul>
-        </li>
-      </ul>
-      <!--<form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+    <!--Navbar-->
+  <nav class="navbar navbar-inverse">
+    <!--Container fluid allows for self change formatting-->
+      <div class="container-fluid">
+      <!--Brand and toggle get grouped for better mobile display-->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://sbekhechi.github.io">Home</a>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>-->
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/whoami.html">Who Am I<span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="/photoport.html">Photography Portfolio</a></li>
+                        <li class="active"><a href="/projects.html">Projects</a></li>
+                        <li class="active"><a href="/contact.html">Contact Me</a></li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Go To<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://edstanden.wix.com/portfolio" onclick='window.open("http://edstanden.wix.com/portfolio"); return false;'>Emma's Website</a></li>
+                            <li><a href="http://andersponders.com/" onclick='window.open("http://andersponders.com/"); return false;'>Anders' Website</a></li>
+                            <li><a href="http://jackhamby.com/" onclick='window.open("http://jackhamby.com/"); return false;'>Jack's Website</a></li>
+                            <li><a href="http://omarshehata.me/" onclick='window.open("http://omarshehata.me");return false;'>Omar's Website</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="https://digmissoula.wixsite.com/digmissoula" onclick='window.open("https://digmissoula.wixsite.com/digmissoula"); return false;'>DIG Missoula Vollyball</a></li>
+                </ul>
+        </div>
+        <!--navbar collapse-->
     </div>
-    <!--navbar collapse-->
+  </nav>
+
+  <h2 style="text-align:center">Night Photography</h2>
+
+<div class="row">
+  <div algin="center">
+    <center><img src="marsky.JPG" style="width:300px; height:200px" onclick="openModal();currentSlide(1)" hspace="20" class="hover-shadow cursor">
+    <img src="watertower.JPG" style="width:300px; height:200px" onclick="openModal();currentSlide(2)" hspace="20" class="hover-shadow cursor">
+    <img src="condos.JPG" style="width:300px; height:200px" onclick="openModal();currentSlide(3)" hspace="20" class="hover-shadow cursor"></center>
   </div>
-</nav>
+</div>
 
-  <style>
-      #marsky {
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      #watertower {
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      #condos {
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      #milk {
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      #brush {
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      #orangesky {
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
+<br>
 
-      #marsky:hover {opacity: 0.7;}
-      #watertower:hover {opacity: 0.7;}
-      #condos:hover {opacity: 0.7;}
-      #milk:hover {opacity: 0.7;}
-      #brush:hover {opacity: 0.7;}
-      #orangesky:hover {opacity: 0.7;}
+<div class="row">
+  <div algin="center">
+    <center><img src="milk.JPG" style="width:300px; height:200px" onclick="openModal();currentSlide(4)" hspace="20" class="hover-shadow cursor">
+    <img src="brush.JPG" style="width:300px; height:200px" onclick="openModal();currentSlide(5)" hspace="20" class="hover-shadow cursor">
+    <img src="orangesky.JPG" style="width:300px; height:200px" onclick="openModal();currentSlide(6)" hspace="20" class="hover-shadow cursor"></center>
+  </div>
+</div>
 
-      /* The Modal (background) */
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        padding-top: 100px; /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-      }
+<br>
 
-      /* Modal Content (image) */
-      .modal-content {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-      }
+<!--slides set up in the modal-->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
 
-      /* Caption of Modal Image */
-      #caption {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-        text-align: center;
-        color: #ccc;
-        padding: 10px 0;
-        height: 150px;
-      }
-
-      /* Add Animation */
-      .modal-content, #caption {    
-        -webkit-animation-name: zoom;
-        -webkit-animation-duration: 0.6s;
-        animation-name: zoom;
-        animation-duration: 0.6s;
-      }
-
-      @-webkit-keyframes zoom {
-        from {-webkit-transform:scale(0)} 
-        to {-webkit-transform:scale(1)}
-      }
-
-      @keyframes zoom {
-          from {transform:scale(0)} 
-          to {transform:scale(1)}
-      }
-
-      /* The Close Button */
-      .close {
-          position: absolute;
-          top: 15px;
-          right: 35px;
-          color: #f1f1f1;
-          font-size: 40px;
-          font-weight: bold;
-          transition: 0.3s;
-      }
-
-      .close:hover,
-      .close:focus {
-          color: #bbb;
-          text-decoration: none;
-          cursor: pointer;
-      }
-
-      /* 100% Image Width on Smaller Screens */
-      @media only screen and (max-width: 700px){
-          .modal-content {
-              width: 100%;
-          }
-      }
-
-  </style>
-
-  <h2><center>Night Photography</center></h2>
-  
-  <br>
-
-  <div algin="container-fluid">
-    <div align="center">
-        <img id="marsky" src="marsky.JPG" alt="Northfield, MN" width="300" height="200" hspace="20">
-        <img id="watertower" src="watertower.JPG" alt="Northfield, MN" width"300" height="200" hspace="20">
-        <img id="condos" src="condos.JPG" alt="Northfield, MN" width"300" height="200" hspace="20">  
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="marsky.JPG" style="width:100%; height:80%">
     </div>
 
-    <br>
-
-    <div align="center">
-        <img id="milk" src="milk.JPG" alt="Northfield, MN" width="300" height="200" hspace="20">
-        <img id="brush" src="brush.JPG" alt="Northfield, MN" width"300" height="200" hspace="20">
-        <img id="orangesky" src="orangesky.JPG" alt="Northfield, MN" width"300" height="200" hspace="20">
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="watertower.JPG" style="width:100%; height:80%">
     </div>
 
-    <br>
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="condos.JPG" style="width:100%; height:80%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="milk.JPG" style="width:100%; height:80%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="brush.JPG" style="width:100%; height:80%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="orangesky.JPG" style="width:100%; height:80%">
+    </div>
+
+    <!--slides inside the modal-->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+        <div class="column">
+      <img class="demo cursor" src="marsky.JPG" style="width:200px; height:100px" onclick="currentSlide(1)" alt="Northfield, MN">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="watertower.JPG" style="width:200px; height:100px" onclick="currentSlide(2)" alt="Northfield, MN">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="condos.JPG" style="width:200px; height:100px" onclick="currentSlide(3)" alt="Northfield, MN">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="milk.JPG" style="width:200px; height:100px" onclick="currentSlide(4)" alt="Northfield, MN">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="brush.JPG" style="width:200px; height:100px" onclick="currentSlide(5)" alt="Northfield, MN">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="orangesky.JPG" style="width:200px; height:100px" onclick="currentSlide(6)" alt="Northfield, MN">
+    </div>
 
   </div>
+</div>
 
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
-    <div id="caption"></div>
-  </div>
+<script>
 
-  <script>
-  // Get the modal
-  var modal = document.getElementById('myModal');
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img1 = document.getElementById('marsky');
-var img2 = document.getElementById('watertower');
-var img3 = document.getElementById('condos');
-var img4 = document.getElementById('milk');
-var img5 = document.getElementById('brush');
-var img6 = document.getElementById('orangesky');
-
-
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img1.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
-img2.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
-img3.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
-img4.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
-img5.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
-img6.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
-// Get the <span> element that closes the modal
+var modal = document.getElementById('myModal');
 var span = document.getElementsByClassName("close")[0];
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-    modal.style.display = "none";
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -268,8 +303,35 @@ window.onclick = function(event) {
     }
 }
 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
 </script>
-
-
+    
 </body>
 </html>
