@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>samirbekhechi.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!--shrink-to-fit-no">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+</style>
+
+<body>
+
+    <!--Navbar-->
+  <nav class="navbar navbar-inverse">
+    <!--Container fluid allows for self change formatting-->
+      <div class="container-fluid">
+      <!--Brand and toggle get grouped for better mobile display-->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://sbekhechi.github.io">Home</a>
+        </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/whoami.html">Who Am I<span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="/photoport.html">Photography Portfolio</a></li>
+                        <li class="active"><a href="/projects.html">Projects</a></li>
+                        <li class="active"><a href="/contact.html">Contact Me</a></li>
+                        <li class="active"><a href="/contest.html">Contact</a></li>
+                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Go To<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://edstanden.wix.com/portfolio" onclick='window.open("http://edstanden.wix.com/portfolio"); return false;'>Emma's Website</a></li>
+                            <li><a href="http://andersponders.com/" onclick='window.open("http://andersponders.com/"); return false;'>Anders' Website</a></li>
+                            <li><a href="http://jackhamby.com/" onclick='window.open("http://jackhamby.com/"); return false;'>Jack's Website</a></li>
+                            <li><a href="http://omarshehata.me/" onclick='window.open("http://omarshehata.me");return false;'>Omar's Website</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="https://digmissoula.wixsite.com/digmissoula" onclick='window.open("https://digmissoula.wixsite.com/digmissoula"); return false;'>DIG Missoula Vollyball</a></li>
+                </ul>
+        </div>
+        <!--navbar collapse-->
+    </div>
+  </nav>
+
+
+  <form method="post" name="contact_form"
+action="contact-form-handler.php">
+    Your Name:
+    <input type="text" name="name">
+    Email Address:
+    <input type="text" name="email">
+    Message:
+    <textarea name="message"></textarea>
+    <input type="submit" value="Submit">
+</form>
+
+<script language="JavaScript">
+var frmvalidator  = new Validator("contactform");
+frmvalidator.addValidation("name","req","Please provide your name");
+frmvalidator.addValidation("email","req","Please provide your email");
+frmvalidator.addValidation("email","email",
+  "Please enter a valid email address");
+</script>
+
+<?php
+$errors = '';
+$myemail = 'sjbekhechi@gmail.com';//<-----Put Your email address here.
+if(empty($_POST['name'])  ||
+   empty($_POST['email']) ||
+   empty($_POST['message']))
+{
+    $errors .= "\n Error: all fields are required";
+}
+$name = $_POST['name'];
+$email_address = $_POST['email'];
+$message = $_POST['message'];
+if (!preg_match(
+"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
+$email_address))
+{
+    $errors .= "\n Error: Invalid email address";
+}
+
+if( empty($errors))
+{
+$to = $myemail;
+$email_subject = "Contact form submission: $name";
+$email_body = "You have received a new message. ".
+" Here are the details:\n Name: $name \n ".
+"Email: $email_address\n Message \n $message";
+$headers = "From: $myemail\n";
+$headers .= "Reply-To: $email_address";
+mail($to,$email_subject,$email_body,$headers);
+//redirect to the 'thank you' page
+header('Location: contact-form-thank-you.html');
+}
+?>
+
+</body>
+</html>
