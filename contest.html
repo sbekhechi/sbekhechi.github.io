@@ -52,58 +52,60 @@
   </nav>
 
 
-  <form method="post" name="contact_form"
-action="contact-form-handler.php">
-    Your Name:
-    <input type="text" name="name">
-    Email Address:
-    <input type="text" name="email">
-    Message:
-    <textarea name="message"></textarea>
-    <input type="submit" value="Submit">
-</form>
+ <?php
+if($_POST["submit"]) {
+$recipient = "brentw.white@gmail.com"; //my email
+$subject = 'Email message from Point Plumbing';
+$name = $_POST ["yourName"];
+$email = $_POST["yourEmail"];
+$phone = $_POST["yourPhone"];
+$location = $_POST["yourLocate"];
+$message = $_POST["message-me"];
 
-<script language="JavaScript">
-var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name");
-frmvalidator.addValidation("email","req","Please provide your email");
-frmvalidator.addValidation("email","email",
-  "Please enter a valid email address");
-</script>
-
-<?php
-$errors = '';
-$myemail = 'sjbekhechi@gmail.com';//<-----Put Your email address here.
-if(empty($_POST['name'])  ||
-   empty($_POST['email']) ||
-   empty($_POST['message']))
-{
-    $errors .= "\n Error: all fields are required";
-}
-$name = $_POST['name'];
-$email_address = $_POST['email'];
-$message = $_POST['message'];
-if (!preg_match(
-"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
-$email_address))
-{
-    $errors .= "\n Error: Invalid email address";
-}
-
-if( empty($errors))
-{
-$to = $myemail;
-$email_subject = "Contact form submission: $name";
-$email_body = "You have received a new message. ".
-" Here are the details:\n Name: $name \n ".
-"Email: $email_address\n Message \n $message";
-$headers = "From: $myemail\n";
-$headers .= "Reply-To: $email_address";
-mail($to,$email_subject,$email_body,$headers);
-//redirect to the 'thank you' page
-header('Location: thanks.html');
+$mailBody="Name: $name\nEmail: $email\n\n$message";
+mail($recipient, $subject, $mailBody, "From: $name <$email>");
+$thankYou="<p>Thank you! We will be in contact with you shortly.</p>";
 }
 ?>
+
+<div id="email" class="large-6 medium-6 small-12 columns">
+              <label><h5>Email</h5>
+                  <input type="email" name="yourEmail" placeholder="Please enter in you're email."required></input>
+              </label>
+              <small class="error">An email Address is required.</small>
+          </div>
+
+          <div class="row">
+              <div id="phone"class="large-6 medium-6 small-12 columns">
+                  <label><h5>Phone</h5>
+                      <input type="text" name="yourPhone" placeholder="Please enter you're phone number."></input>
+                  </label>
+              </div>
+
+              <div id="location" class="large-6 medium-6 small-12 columns">
+                  <label><h5>Location</h5>
+                      <input type="text" name="yourLocate" placeholder="Where on Oahu are you currently living?"></input>
+                  </label>
+              </div>
+          </div>
+
+          <div class="row">
+              <div id="message-area" class="large-12 medium-12 small-12 columns">
+                  <label><h5>Message</h5>
+                      <textarea id="message" name="yourMessage" placeholder="Please tell us about you're plumbing issues."></textarea>
+                  </label>
+              </div>
+          </div>
+
+      <div class="row">
+          <div id="submit" class="large-3 medium-3 small-3 columns">
+              <button type="submit-me">Submit</button>
+          </div>
+      </div>
+        </div>
+    </form>
+
+
 
 </body>
 </html>
