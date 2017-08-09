@@ -8,11 +8,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit-no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="icon" href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <style>
+
+@button-colour: #009ED8;
+@button-text: #ffffff;
+@regular-text: #333;
+@button-tint: fadeout(#000, 90%);
+@background: #303036;
+
+* {
+  box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  padding: .8em 1.4em;
+  padding-right: 4.7em;
+  background: @button-colour;
+  border: none;
+  color: white;
+  transition: .2s;
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    width: 2.8em;
+    content: "\00a0";
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    
+    transition: .2s;
+    transform-origin: 50% 60%;
+  }
+  &:before {
+    background: @button-tint;
+  }
+  &:hover {
+    background: darken(@button-colour, 10%);
+  }
+  &:active,
+  &:focus {
+    background: darken(@button-colour, 30%);
+    outline: none;
+  }
+}
+
+.button {
+  min-width: 15em;
+}
+
+.arrow {
+  background: #FE5F55;
+  &:hover {
+    background: darken(#FE5F55, 10%);
+  }
+  &:active,
+  &:focus {
+    background: darken(#FE5F55, 30%);
+  }
+  &:after {
+    content: "\F054";
+  }
+  &:hover:after {
+    -webkit-animation: bounceright .3s alternate ease infinite;
+    animation: bounceright .3s alternate ease infinite;
+  }
+}
+
 
     .icon{
       margin-top: 5px;
@@ -99,6 +175,9 @@
       <div class="col-sm-6">
         <h3><font face="palatino">Education</font></h3>
         <p><font face="palatino">Graduate of St. Olaf College, Class of 2017 with a degree in Computer Science.</font></p>
+        <br>
+
+        <button class="button arrow">Read more</button>
         <br>
         <p><a href="/samirResume.pdf" target='_blank' title="Samir Bekhechi">Resume</a></p>
         <br>
