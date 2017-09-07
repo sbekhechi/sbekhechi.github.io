@@ -6,6 +6,7 @@
   <title>samirbekhechi</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"> <!--shrink-to-fit-no">-->
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -16,6 +17,96 @@
     margin:0;
   }
 
+  /* who am i section */
+
+  @button-colour: #0C57DA;
+@button-text: #ffffff;
+@regular-text: #333;
+@button-tint: fadeout(#000, 90%);
+@background: #303036;
+
+* {
+  box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  padding: .8em 1.4em;
+  background: @button-colour;
+  border: none;
+  color: white;
+  transition: .2s;
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-top: inherit;
+    padding-bottom: inherit;
+    width: 2.8em;
+    content: "\00a0";
+    font-family: 'FontAwesome', sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    
+    transition: .2s;
+    transform-origin: 50% 60%;
+  }
+  &:before {
+    background: @button-tint;
+  }
+  &:hover {
+    background: darken(@button-colour, 10%);
+  }
+  &:active,
+  &:focus {
+    background: darken(@button-colour, 30%);
+    outline: none;
+  }
+}
+
+.button {
+  min-width: 15em;
+}
+
+.arrow {
+  background: #0C57DA;
+  &:hover {
+    background: darken(#0C57DA, 10%);
+  }
+  &:active,
+  &:focus {
+    background: darken(#0C57DA, 30%);
+  }
+  &:after {
+    content: "\F054";
+  }
+  &:hover:after {
+    -webkit-animation: bounceright .3s alternate ease infinite;
+    animation: bounceright .3s alternate ease infinite;
+  }
+}
+
+
+    .icon{
+      margin-top: 5px;
+      height: 40px;
+      width: 40px;
+    }
+
+    .navbar.navbar-inverse {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      margin-bottom: 0px;
+    }
+
+  /* end of who am i section */
+
     .icon{
       margin-top: 5px;
       height: 40px;
@@ -23,17 +114,14 @@
     }
 
     .bg{
+    background: fixed;
     background-image: url("housenight.JPG");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     border-top: 0px;
     margin-top: -20px;
-    }
-
-    .navbar.navbar-inverse {
-      margin-bottom: 0px;
     }
 
     #rightnav{
@@ -72,7 +160,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/whoami.html">Who Am I<span class="sr-only">(current)</span></a></li>
         <li class="active"><a href="/photoport.html">Photography Portfolio</a></li>
         <!--<li class="active"><a href="/projects.html">Projects</a></li>-->
         <li class="dropdown">
@@ -104,17 +191,66 @@
     <!--container end-->
   </nav>
 
-  <div class="bg">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1><center><font face="palatino" size="11" color="white">Samir Bekhechi</font></center></h1>
-    <h4><center><font face="palatino" color="white">Programmer | Photographer</font></center></h4>
+<div class="bg">
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1><center><font face="palatino" size="11" color="white"><a href="#MID" style="color: #ffffff;">Samir Bekhechi</a></font></center></h1>
+      <h4><center><font face="palatino" color="white">Web Developer | Photographer</font></center></h4>
+    </div>
   </div>
+</div>
+
+  <!--First row of information--> 
+<div class="row text-center">
+  <div class="col-sm-4">
+  </div>
+  <!--Who Am I?-->
+  <div class="col-sm-4">
+    <br>
+    <a name="MID"></a>
+    <img src="me.PNG" class="img-circle" style="width: 140px; height: 140px;">
+    <h3><font face="palatino">Who Am I?</font></h3>
+    <p><font size="4" face="palation">Hello! I'm a recent computer science graduate of St. Olaf College currently on the lookout for one of those things called a job.</font></p>
+    <br>
+    <p><font size="4" face="palatino">My rise to computer scientist and love for technology began when my parents allowed me to use the family computer to play "Carmen Sandiego" and "Arthur's Reading Race" with my sister.  From there I became an avid gamer on platforms like PC, Playstation, and Xbox (which is a hobby that may or may not have stayed with me)...Anywho, as technology grew, so did I and while living in Ohio for a time, I took a course on animations and simple template website creations and proceeded to make countless joke animations and sites.</font></p>
+    <br>
+    <p><font size="4" face="palatino">Through high school I had gained a love of languages and began learning Arabic (and continued my French education) which I continued into college.  By the end of my first year at St. Olaf College I had thought I had my life planned out. I would continue my education in Arabic and eventually find a way to work for the state department (or C.I.A. and be an awesome spy).  However after my first course in computer science, with Professor Richard Allen, I saw all the ways I could help people using technology.  After quickly switching my major at the registrars office, I was where I felt I truly belonged.</font></p>
+    <br>
+  </div>
+  <!--Spacing-->
+  <div class="col-sm-4">
+  </div>
+  <!--Spacing-->
+</div>
+
+  <!--Second row of information-->
+<div class="row text-center">
+  <div class="col-sm-4">
+  </div>
+    <!--Education-->
+    <div class="col-sm-4">
+      <h3><font face="palatino">Education</font></h3>
+      <p><font size="4" face="palatino">Graduate of St. Olaf College, Class of 2017 with a degree in Computer Science.</font></p>
+      <br>
+      <a href="/samirResume.pdf" target='_blank' title="Samir Bekhechi"><button class="button arrow"><font color="white" size="4">Resume</font></a></button>
+      <br>
+      <br>
+    </div>
+    <!--Spacing-->
+    <div class="col-sm-4">
+    </div>
+    <!--Spacing-->
+</div> <!--end of second row-->
+
+
+
 
 </body>
 </html>
