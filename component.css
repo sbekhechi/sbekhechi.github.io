@@ -11,7 +11,7 @@
 
 /* General button style (reset) */
 .btn {
-	border: none;
+	border: 5px;
 	font-family: inherit;
 	font-size: inherit;
 	color: inherit;
@@ -137,8 +137,8 @@
 /* Button 4 */
 .btn-4 {
 	border-radius: 50px;
-	border: 3px solid #fff;
-	color: #fff;
+	border: 3px solid #101010;
+	color: #17954c;
 	overflow: hidden;
 }
 
@@ -153,10 +153,11 @@
 
 .btn-4:before {
 	position: absolute;
+	border: 5px solid #101010;
 	height: 100%;
 	font-size: 125%;
 	line-height: 3.5;
-	color: #fff;
+	color: #101010;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -168,6 +169,8 @@
 
 /* Button 4a */
 .btn-4a:before {
+	border: 5px solid #101010;
+	color: #101010;
 	left: 130%;
 	top: 0;
 }
@@ -175,41 +178,6 @@
 .btn-4a:hover:before {
 	left: 80%;
 }
-
-/* Button 4b */
-.btn-4b:before {
-	left: -50%;
-	top: 0;
-}
-
-.btn-4b:hover:before {
-	left: 10%;
-}
-
-/* Button 4c */
-.btn-4c:before {
-	left: 70%;
-	opacity: 0;
-	top: 0;
-}
-
-.btn-4c:hover:before {
-	left: 80%;
-	opacity: 1;
-}
-
-/* Button 4d */
-.btn-4d:before {
-	left: 30%;
-	opacity: 0;
-	top: 0;
-}
-
-.btn-4d:hover:before {
-	left: 10%;
-	opacity: 1;
-}
-
 
 /* Button 7 */
 .btn-7 {
