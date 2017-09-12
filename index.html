@@ -19,7 +19,7 @@
   <link rel="shortcut icon" href="../favicon.ico"> 
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-  
+</head>
   
   <style>
   body, html{
@@ -28,78 +28,6 @@
   }
 
   /* who am i section */
-
-  @button-colour: #0C57DA;
-@button-text: #ffffff;
-@regular-text: #333;
-@button-tint: fadeout(#000, 90%);
-@background: #303036;
-
-* {
-  box-sizing: border-box;
-}
-
-.button {
-  display: inline-block;
-  font-family: "Montserrat", "Trebuchet MS", Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  position: relative;
-  padding: .8em 1.4em;
-  background: @button-colour;
-  border: none;
-  color: white;
-  transition: .2s;
-  &:before,
-  &:after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding-top: inherit;
-    padding-bottom: inherit;
-    width: 2.8em;
-    content: "\00a0";
-    font-family: 'FontAwesome', sans-serif;
-    font-size: 1.2em;
-    text-align: center;
-    
-    transition: .2s;
-    transform-origin: 50% 60%;
-  }
-  &:before {
-    background: @button-tint;
-  }
-  &:hover {
-    background: darken(@button-colour, 10%);
-  }
-  &:active,
-  &:focus {
-    background: darken(@button-colour, 30%);
-    outline: none;
-  }
-}
-
-.button {
-  min-width: 15em;
-}
-
-.arrow {
-  background: #0C57DA;
-  &:hover {
-    background: darken(#0C57DA, 10%);
-  }
-  &:active,
-  &:focus {
-    background: darken(#0C57DA, 30%);
-  }
-  &:after {
-    content: "\F054";
-  }
-  &:hover:after {
-    -webkit-animation: bounceright .3s alternate ease infinite;
-    animation: bounceright .3s alternate ease infinite;
-  }
-}
 
 
     .icon{
@@ -144,8 +72,6 @@
     }
 
   </style>
-
-</head>
 
 <body>
 
