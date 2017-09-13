@@ -169,7 +169,7 @@
 
 /* Button 4a */
 .btn-4a:before {
-	border: 5px solid #101010;
+	border: none;
 	color: #101010;
 	left: 130%;
 	top: 0;
