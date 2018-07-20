@@ -1,0 +1,54 @@
+<style>
+  body, html{
+    height:100%;
+    margin:0;
+  }
+
+  /* who am i section */
+
+
+    .icon{
+      margin-top: 5px;
+      height: 40px;
+      width: 40px;
+    }
+
+    .navbar.navbar-inverse {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      margin-bottom: 0px;
+    }
+
+  /* end of who am i section */
+
+    .icon{
+      margin-top: 5px;
+      height: 40px;
+      width: 40px;
+    }
+
+    .bg{
+    background: fixed;
+    background-image: url("itme.JPG");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-top: 0px;
+    margin-top: -20px;
+    margin: 0px;
+    }
+
+
+
+    #rightnav{
+      float: right;
+    }
+
+    #centernav{
+      display: inline-block;
+    }
+
+</style>
