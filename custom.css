@@ -1,0 +1,81 @@
+
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  min-height: 100%;
+  max-height: 100%;
+  background: white;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+  background: white;
+  background-image: url("grahameyes.jpg");
+}
+
+/* 11111 Create two unequal columns that floats next to each other */
+/* Left column */
+.blogcolumn {   
+  float: left;
+  width: 60%;
+}
+/* Right column */
+.rightcolumn {
+  float: right;
+  width: 40%;
+  padding-left: 20px;
+}
+/* 111111111111111111111111 */
+
+/* 22222222 Blog section panel, left & right divs */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.text-left {
+  float: left;
+  max-width: 50%;
+}
+
+.img-right {
+  float: right;
+  max-width: 50%;
+}
+/* 2222222222222222222 */
+
+/*image manipulation section*/
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+
+
+
+

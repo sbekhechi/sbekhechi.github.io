@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UX-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Eyes > Stomach</title>
+
+		<!-- Bootstrap CDN & Such -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="custom.css">
+	</head>
+
+
+	<body>
+		<div class="header">
+			<h2 style="color: white;">Eyes > Stomach</h2>
+		</div>
+		<section id="intro" class="text-intro no-padding-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-lg-20">
+						<h2> <text-align: center>Hey food people!  Welcome to <span class="text-primary">Eyes > Stomach!</h2>
+						<h3>I'm a Colorado Kid looking to spread my seed...of food knowledge to the rest of the world</h3>
+						<h4>Facts About Me:  I work full-time as a nurse at one of the top hospitals in the nation and love saving children and running marathons in my free time.  I live and die for my future wife Rawshell Saxtoon."</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+		<br>
+		<!-- Blog Section -->
+		<section id="blog" class="no-padding-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="blogcolumn">
+
+	<!--Accordion wrapper-->
+						<button class="accordion">Cous Cous | 12/19/2018</button>
+							<div class="panel">
+								<br>
+								<div class="text-left">
+							  		<p>The food tasted like a lot of poopy kaka sprinkled with garbledeegook. No time for games at this restaurant, eat and get out. Steak is great with mashed potates and dates. Rhyming for joy playing with you like a toy, hope this next verse you enjoy, go sit down now lil boy.</p>
+							  	</div>
+							  	<div class="img-right">
+							  		<img src="couscous.jpg">
+							  	</div>
+							</div>
+
+						<button class="accordion">Egg and Chorizo Bagel | 1/1/2019</button>
+							<div class="panel">
+								<br>
+								<div class="text-left">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								</div>
+								<div class="img-right">
+									<img src="#">
+								</div>
+							</div>
+		<!--Accordion wrapper-->
+
+					</div>
+					<div class="rightcolumn">
+						<h3> Who am I? </h3>
+						<img src="nicegraham.jpg">
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+			  acc[i].addEventListener("click", function() {
+			    this.classList.toggle("active");
+			    var panel = this.nextElementSibling;
+			    if (panel.style.maxHeight){
+			      panel.style.maxHeight = null;
+			    } else {
+			      panel.style.maxHeight = panel.scrollHeight + "px";
+			    } 
+			  });
+			}
+		</script>
+
+	</body>
+
+</html>
+
+
+
+
